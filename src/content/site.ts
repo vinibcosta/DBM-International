@@ -131,7 +131,6 @@ export const home = {
  * Sem logo, o nome aparece em texto.
  */
 export const partners: { name: string; logo?: string }[] = [
-  { name: "ILAC Language Academy", logo: wix("06900b_8c99b3c6c4d44238a3f9a8ab71e1a293~mv2.png") },
   { name: "Camosun College", logo: wix("06900b_6c9359b4d20046e693273cf08ac473d0~mv2.jpg") },
   { name: "NBCC", logo: wix("06900b_76c260744f1740c290f5826a6d303b1e~mv2.png") },
   { name: "University of Regina", logo: wix("06900b_b617f45b465649059312d2f7374432a4~mv2.jpeg") },
