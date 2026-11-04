@@ -1,26 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap");
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+ * ============================================================
+ *  CORES E FONTES — mude aqui para alterar o visual do site todo.
+ * ============================================================
+ */
+@theme {
+  --color-brand: #0b3d7a;        /* azul principal */
+  --color-brand-dark: #072a55;   /* azul escuro (rodapé, hover) */
+  --color-brand-light: #e8f0fb;  /* fundo azul claro */
+  --color-accent: #f5a623;       /* destaque (botões, palavras) */
+  --color-accent-dark: #d98c0a;
+  --color-ink: #1c2430;          /* texto */
+  --color-muted: #5b6676;        /* texto secundário */
+  --color-surface: #f7f9fc;      /* fundo de seções alternadas */
+
+  --font-display: "Montserrat", system-ui, sans-serif;
+  --font-sans: "Open Sans", system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    @apply bg-white text-ink font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display text-brand;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@utility container-site {
+  @apply mx-auto w-full max-w-6xl px-5;
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center rounded-full px-6 py-3 font-display text-sm font-semibold uppercase tracking-wide transition;
+}
+@utility btn-primary {
+  @apply btn bg-accent text-brand-dark hover:bg-accent-dark;
+}
+@utility btn-outline {
+  @apply btn border-2 border-white text-white hover:bg-white hover:text-brand;
+}
+
+@utility section-title {
+  @apply font-display text-3xl font-extrabold text-brand md:text-4xl;
 }
