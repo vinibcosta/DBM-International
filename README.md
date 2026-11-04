@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Site DBM International Education (Next.js)
 
-## Getting Started
+Recriação do site educationdbm.com (Wix) em **Next.js 15 + TypeScript + Tailwind CSS 4**.
 
-First, run the development server:
+## Rodar no seu computador
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Onde editar
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| O que você quer mudar | Arquivo |
+|---|---|
+| Textos, menu, programas, parceiros, contatos, links | `src/content/site.ts` |
+| Cores e fontes do site inteiro | `src/app/globals.css` (bloco `@theme`) |
+| Layout de cada página | `src/app/<pagina>/page.tsx` |
+| Cabeçalho / rodapé / blocos reutilizáveis | `src/components/` |
 
-## Learn More
+## Páginas
 
-To learn more about Next.js, take a look at the following resources:
+| URL | Arquivo |
+|---|---|
+| `/` | `src/app/page.tsx` |
+| `/sobre` | `src/app/sobre/page.tsx` |
+| `/estudar` | `src/app/estudar/page.tsx` |
+| `/form` (contato) | `src/app/form/page.tsx` |
+| `/politicadbm` | `src/app/politicadbm/page.tsx` |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+As URLs são as mesmas do site atual, então links antigos continuam funcionando.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Imagens
 
-## Deploy on Vercel
+Hoje as imagens são carregadas direto do servidor do Wix. Antes de cancelar o Wix:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run baixar-imagens
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Isso salva tudo em `public/images/`. Depois troque as URLs em `src/content/site.ts`
+(ex.: `images.logo = "/images/06900b_1b3c02f2b2bb414286912cabefaab261.png"`).
+
+Logos de parceiros: coloque em `public/images/parceiros/` e adicione `logo: "/images/parceiros/arquivo.png"` no item da lista `partners`.
+
+## Formulário de contato
+
+Sem configuração, o botão "Enviar" abre o e-mail do visitante já preenchido.
+Para receber os envios direto no e-mail da DBM:
+
+1. Crie uma conta grátis em https://formspree.io e um formulário apontando para info@educationdbm.com
+2. Cole a URL em `contato.formEndpoint` no `src/content/site.ts`
+
+## Publicar
+
+O jeito mais simples é a **Vercel** (grátis):
+1. Suba o projeto para um repositório no GitHub
+2. Em vercel.com → *Add New Project* → importe o repositório → *Deploy*
+3. Em *Settings → Domains*, adicione `educationdbm.com` e siga as instruções de DNS
+
+## Pendências (conferir com a DBM)
+
+- Cores e fontes exatas da marca (as atuais são uma proposta — ajuste em `globals.css`)
+- Imagem do card "Estude inglês e trabalhe" (Irlanda)
+- Logos dos parceiros e selos/prêmios da página "Sobre"
+- Tabela de níveis educacionais em `/estudar` (conferir equivalências)
+- Texto oficial da política de privacidade
