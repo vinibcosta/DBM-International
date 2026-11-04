@@ -2,6 +2,8 @@
 
 Recriação do site educationdbm.com (Wix) em **Next.js 15 + TypeScript + Tailwind CSS 4**.
 
+🔗 **Site no ar:** https://dbmv1.vercel.app/
+
 ## Rodar no seu computador
 
 ```bash
