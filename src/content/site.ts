@@ -36,7 +36,7 @@ export const site = {
 export const contact = {
   email: "info@educationdbm.com",
   phone: "+1 204 250 2830",
-  whatsapp: "+12506689781",
+  whatsapp: "+12042502830",
   whatsappMessage: "Olá! Gostaria de saber mais sobre estudar no exterior com a DBM.",
 };
 
@@ -127,32 +127,32 @@ export const home = {
 };
 
 /**
- * Parceiros. Para usar logo, adicione `logo: "/images/parceiros/nome.png"`.
+ * Parceiros. Para usar logo, adicione `logo: wix("id")` ou `logo: "/images/parceiros/nome.png"`.
  * Sem logo, o nome aparece em texto.
  */
 export const partners: { name: string; logo?: string }[] = [
-  { name: "ILAC Language Academy" },
-  { name: "Camosun College" },
-  { name: "NBCC" },
-  { name: "University of Regina" },
-  { name: "Cambrian College" },
-  { name: "City University in Canada" },
-  { name: "University of Victoria" },
-  { name: "Crandall University" },
-  { name: "Justice Institute of BC" },
-  { name: "Manitoba Institute" },
-  { name: "Bow Valley College" },
-  { name: "Medicine Hat College" },
-  { name: "European University" },
-  { name: "Webster University" },
-  { name: "Centennial College" },
-  { name: "Western College" },
-  { name: "Sault College" },
-  { name: "George Brown College" },
-  { name: "Universidad Europea" },
-  { name: "Langara College" },
-  { name: "INTER" },
-  { name: "O'Sullivan College" },
+  { name: "ILAC Language Academy", logo: wix("06900b_8c99b3c6c4d44238a3f9a8ab71e1a293~mv2.png") },
+  { name: "Camosun College", logo: wix("06900b_6c9359b4d20046e693273cf08ac473d0~mv2.jpg") },
+  { name: "NBCC", logo: wix("06900b_76c260744f1740c290f5826a6d303b1e~mv2.png") },
+  { name: "University of Regina", logo: wix("06900b_b617f45b465649059312d2f7374432a4~mv2.jpeg") },
+  { name: "Cambrian College", logo: wix("06900b_1bca3b6802934c94bad497356fda7373~mv2.png") },
+  { name: "City University in Canada", logo: wix("06900b_8491c1f7765f4e29aacf45cb25324ef4~mv2.png") },
+  { name: "University of Victoria", logo: wix("06900b_786ef854853448be83668ff37c745651~mv2.png") },
+  { name: "Crandall University", logo: wix("06900b_ea2ded2b5a9c4cedb1e22d2c0931c810~mv2.jpeg") },
+  { name: "Justice Institute of BC", logo: wix("06900b_47b1176a3b62483288d74c4f917d63aa~mv2.png") },
+  { name: "Manitoba Institute", logo: wix("06900b_8eb0c855893745cba5016c286b59a6d7~mv2.jpeg") },
+  { name: "Bow Valley College", logo: wix("06900b_76e94682ceb94c4cb4b089da043c3b49~mv2.jpeg") },
+  { name: "Medicine Hat College", logo: wix("06900b_d3b630c1a8f2478fa1f1774870c8efa1~mv2.jpeg") },
+  { name: "European University", logo: wix("06900b_45a2dc6b73af4e8aa4c3240fba148f96~mv2.png") },
+  { name: "Webster University", logo: wix("06900b_f501d8a9c0ec4df58da2262dbfa48514~mv2.png") },
+  { name: "Centennial College", logo: wix("06900b_b376c24c90dd4f6c97d20ad5f54a409d~mv2.png") },
+  { name: "Western College", logo: wix("06900b_c88c4e71d9434845b7035b189038b558~mv2.png") },
+  { name: "Sault College", logo: wix("06900b_dcaae7d08e6747e2aea8a95bb2089680~mv2.jpg") },
+  { name: "George Brown College", logo: wix("06900b_799f128fa01843bca4a48d49e5930ed9~mv2.png") },
+  { name: "Universidad Europea", logo: wix("06900b_691fe9cf30f34ec1a59c93a2bd48a8a8~mv2.png") },
+  { name: "Langara College", logo: wix("06900b_79b26b36009e477ebffcc8246d1e89ef~mv2.png") },
+  { name: "INTER", logo: wix("06900b_21874f7023bc40468d0a56b5e4bcbace~mv2.jpeg") },
+  { name: "O'Sullivan College", logo: wix("06900b_1ecaa72ea56c4b51af020c0db40d24f4~mv2.png") },
   { name: "Conestoga" },
   { name: "University of Manitoba" },
   { name: "Georgian College" },
