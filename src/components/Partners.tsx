@@ -13,7 +13,7 @@ export default function Partners({ title }: { title: string }) {
             >
               {p.logo ? (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={p.logo} alt={p.name} className="max-h-16 w-auto object-contain" />
+                <img src={p.logo} alt={p.name} loading="lazy" decoding="async" className="max-h-16 w-auto object-contain" />
               ) : (
                 <span className="font-display text-sm font-semibold text-brand">{p.name}</span>
               )}

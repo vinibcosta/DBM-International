@@ -11,7 +11,7 @@ export default function PageHero({
     <section className="relative overflow-hidden bg-brand text-white">
       {image && (
         // eslint-disable-next-line @next/next/no-img-element
-        <img src={image} alt="" className="absolute inset-0 h-full w-full object-cover opacity-25" />
+        <img src={image} alt="" fetchPriority="high" className="absolute inset-0 h-full w-full object-cover opacity-25" />
       )}
       <div className="absolute inset-0 bg-gradient-to-r from-brand-dark/90 to-brand/60" />
       <div className="container-site relative py-20 md:py-28">

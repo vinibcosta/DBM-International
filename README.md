@@ -36,16 +36,17 @@ As URLs são as mesmas do site atual, então links antigos continuam funcionando
 
 ## Imagens
 
-Hoje as imagens são carregadas direto do servidor do Wix. Antes de cancelar o Wix:
+As imagens ficam em `public/images/` (o logo fica em `public/logo-dbm.png`). Para trocar ou adicionar uma:
+
+1. Coloque o arquivo (.jpg, .jpeg ou .png) em `public/images/`
+2. Use o caminho em `src/content/site.ts` (ex.: `logo: "/images/arquivo.png"` num parceiro)
+3. Rode:
 
 ```bash
-npm run baixar-imagens
+npm run otimizar-imagens
 ```
 
-Isso salva tudo em `public/images/`. Depois troque as URLs em `src/content/site.ts`
-(ex.: `images.logo = "/images/06900b_1b3c02f2b2bb414286912cabefaab261.png"`).
-
-Logos de parceiros: coloque em `public/images/parceiros/` e adicione `logo: "/images/parceiros/arquivo.png"` no item da lista `partners`.
+Isso reduz a imagem, converte para WebP (bem mais leve) e atualiza o caminho no `site.ts` sozinho.
 
 ## Formulário de contato
 
@@ -55,17 +56,21 @@ Para receber os envios direto no e-mail da DBM:
 1. Crie uma conta grátis em https://formspree.io e um formulário apontando para info@educationdbm.com
 2. Cole a URL em `contato.formEndpoint` no `src/content/site.ts`
 
-## Publicar
+## Publicar (VPS Hostinger)
 
-O jeito mais simples é a **Vercel** (grátis):
-1. Suba o projeto para um repositório no GitHub
-2. Em vercel.com → *Add New Project* → importe o repositório → *Deploy*
-3. Em *Settings → Domains*, adicione `educationdbm.com` e siga as instruções de DNS
+O site é exportado como HTML estático (`npm run build` gera a pasta `out/`) e servido pelo Nginx.
+A configuração do Nginx está em `deploy/nginx.conf`.
+
+Para atualizar o site depois de fazer `git push`, rode na VPS:
+
+```bash
+bash /var/www/dbm-site/deploy/atualizar.sh
+```
 
 ## Pendências (conferir com a DBM)
 
 - Cores e fontes exatas da marca (as atuais são uma proposta — ajuste em `globals.css`)
 - Imagem do card "Estude inglês e trabalhe" (Irlanda)
-- Logos dos parceiros e selos/prêmios da página "Sobre"
+- Selos/prêmios da página "Sobre"
 - Tabela de níveis educacionais em `/estudar` (conferir equivalências)
 - Texto oficial da política de privacidade

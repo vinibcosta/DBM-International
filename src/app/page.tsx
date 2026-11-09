@@ -27,6 +27,7 @@ export default function HomePage() {
             <img
               src={images.hero}
               alt="Estudantes no exterior"
+              fetchPriority="high"
               className="relative aspect-[5/4] w-full rounded-3xl bg-brand-dark object-cover shadow-2xl"
             />
           </div>
@@ -48,6 +49,8 @@ export default function HomePage() {
                   <img
                     src={p.image}
                     alt={p.imageAlt}
+                    loading="lazy"
+                    decoding="async"
                     className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                   />
                 </div>

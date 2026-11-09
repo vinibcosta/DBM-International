@@ -10,7 +10,7 @@ export default function Footer() {
         <div>
           <div className="inline-block rounded-xl bg-white p-3">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={images.logo} alt="DBM Logo" className="h-14 w-auto" />
+            <img src={images.logo} alt="DBM Logo" loading="lazy" className="h-14 w-auto" />
           </div>
           <p className="mt-4 max-w-xs text-sm">{site.description}</p>
         </div>
