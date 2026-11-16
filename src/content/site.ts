@@ -48,7 +48,8 @@ export const nav = [
   { label: "Home", href: "/" },
   { label: "Conheça a DBM", href: "/sobre" },
   { label: "Estudar no exterior", href: "/estudar" },
-  { label: "Study DBM", href: "https://studydbm.studentpanel.net/login", external: true },
+  // Oculto temporariamente — descomente para reexibir.
+  // { label: "Study DBM", href: "https://studydbm.studentpanel.net/login", external: true },
   { label: "Seguro saúde", href: "https://www.mshgroups.com/dbm/en", external: true },
   {
     label: "Homestay",
