@@ -233,20 +233,16 @@ export const estudar = {
 export const contato = {
   title: "Pronto para sonhar grande e ganhar o MUNDO com a DBM?",
   text: "Preencha o formulário e nossa equipe entra em contato com você.",
+  formTitle: "Formulário de contato",
   /**
-   * Para receber os envios por e-mail, crie um formulário grátis em
-   * https://formspree.io e cole a URL aqui (ex: "https://formspree.io/f/abcd1234").
-   * Se ficar vazio, o formulário abre o app de e-mail do visitante.
+   * Google Forms exibido na página de contato. Para trocar de formulário,
+   * cole aqui o link "viewform" do novo (o "?embedded=true" é adicionado sozinho).
    */
-  formEndpoint: "",
-  interests: [
-    "Cursos de idioma",
-    "Programas profissionais",
-    "Programas universitários",
-    "Ensino médio",
-    "Cursos de férias",
-    "Estudar e trabalhar (Irlanda)",
-    "Imigração",
-    "Outro",
-  ],
+  googleFormUrl:
+    "https://docs.google.com/forms/d/e/1FAIpQLSfDkKOHDfJvBIdotm85S6L5LiMleMo5f9A9JbAl2XxWFusOvg/viewform",
+  /**
+   * Altura do formulário em pixels. Se aparecer barra de rolagem dentro dele
+   * ou sobrar espaço em branco embaixo, ajuste estes números.
+   */
+  formHeight: { mobile: 1700, desktop: 1400 },
 };
