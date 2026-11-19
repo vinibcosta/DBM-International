@@ -70,7 +70,6 @@ bash /var/www/dbm-site/deploy/atualizar.sh
 ## Pendências (conferir com a DBM)
 
 - Cores e fontes exatas da marca (as atuais são uma proposta — ajuste em `globals.css`)
-- Imagem do card "Estude inglês e trabalhe" (Irlanda)
 - Selos/prêmios da página "Sobre"
 - Tabela de níveis educacionais em `/estudar` (conferir equivalências)
 - Texto oficial da política de privacidade

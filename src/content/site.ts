@@ -12,14 +12,16 @@
 export const images = {
   logo: "/logo-dbm.png",
   hero: "/images/nsplsh_6e10cfaaa8df41b8b64ec00a3563a333.webp",
-  profissionais: "/images/11062b_6c2ee0ca65bc4691949fe074c9c54595.webp",
+  // Foto de PTTI EDU no Unsplash: https://unsplash.com/photos/k9Dc5zT1Gq0
+  profissionais: "/images/programas-profissionais-1.webp",
   ferias: "/images/nsplsh_1803ecb964f0495c926c196e133a4d78.webp",
   universitarios: "/images/11062b_76cceaa4b3f845d799b17ed5ef4d3d5e.webp",
   // Foto de Vitaly Gariev no Unsplash: https://unsplash.com/photos/8gAbl776pc0
   programasUniversitarios: "/images/programas-universitarios-1.webp",
   ensinoMedio: "/images/11062b_d337a8c793004cdea5093dafae9aafcd.webp",
   idiomas: "/images/nsplsh_564d337536694476574467.webp",
-  irlanda: "/images/11062b_6c2ee0ca65bc4691949fe074c9c54595.webp", // TODO: trocar pela imagem real de Irlanda
+  // Foto de X (@disruptxn) no Unsplash: https://unsplash.com/photos/IgUR1iX0mqM
+  irlanda: "/images/estude-ingles-trabalhe-1.webp",
 };
 
 export const site = {
@@ -78,7 +80,7 @@ export const home = {
       title: "Programas profissionais",
       text: "Programas vocacionais de estudo e trabalho que unem formação de qualidade e experiência profissional internacional.",
       image: images.profissionais,
-      imageAlt: "Estudantes se divertindo na neve",
+      imageAlt: "Estudante com óculos de proteção usando uma esmerilhadeira em uma oficina, observada por uma instrutora",
     },
     {
       title: "Cursos de férias",
@@ -108,7 +110,7 @@ export const home = {
       title: "Estude inglês e trabalhe",
       text: "Estude inglês e trabalhe legalmente na Irlanda — escolha entre Dublin ou Cork.",
       image: images.irlanda,
-      imageAlt: "Estudantes na Irlanda",
+      imageAlt: "Mulher e homem adultos trabalhando juntos em um notebook em um escritório",
     },
   ],
   about: {
